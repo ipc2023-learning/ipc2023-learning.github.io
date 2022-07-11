@@ -1,0 +1,239 @@
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+.col-lg-12 {  
+    max-width: 820px;
+}
+
+body {
+   font-family: 'Open Sans', sans-serif;
+   font-size:15px;
+   font-weight:400;
+}
+
+.col-section .table>tbody>tr>td, .col-section .table>tbody>tr>th, .col-section .table>tfoot>tr>td, .col-section .table>tfoot>tr>th, .col-section .table>thead>tr>td, .col-section .table>thead>tr>th{
+      border-top: 1px solid #EAE2B9;
+}
+
+.table>thead>tr>th {
+    border-color: #EAE2B9;
+}
+
+.sidebar-nav > .sidebar-brand a {
+      font-family: 'Exo', sans-serif;
+      color:#fff;
+      text-transform: uppercase;      
+}
+
+.sidebar-brand {
+    margin-bottom: 1em;
+}
+
+h1, .subheading {
+    font-family: 'Exo', sans-serif;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight:500;
+}
+
+h1 {
+        font-size: 48px;
+}
+
+h1, h2, h3, h1, h2, h3 {
+    font-family: 'Exo', sans-serif;
+    text-transform: uppercase;
+    font-weight:500;
+    margin-bottom:0.8em;
+}
+
+.turq {
+    /*color: mediumturquoise;*/
+    /* http://coloreminder.com/48d1cc */
+    color: #48d1cc;
+}
+
+.subheading {
+    color: #999;
+}
+
+.section {
+    margin-top: 26px;
+}
+
+.row {
+	padding: 20px;
+}
+
+.col-section {
+    /*background-color: #ebfaf9;*/
+    background-color: #FFF9D9;
+}
+
+dl {
+	margin-top: 20px;
+}
+dt, dd {
+	margin-bottom: 5px;
+}
+
+
+
+
+#timeline table {
+	/*width: 80%;*/
+}
+
+.strikethrough {
+	text-decoration: line-through;
+}
+
+.addborder {
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
+    border-style: dotted;
+    padding: 13px;
+    margin-left: 10px;
+    text-transform: lowercase;
+}
+
+.left {
+    float: left;
+}
+
+
+
+/* Toggle Styles */
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    /*padding: 15px;*/
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+    font-size:1.15em;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    line-height:6em;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        /*padding: 20px;*/
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+@media(max-width:767px) {
+    h1 {
+        font-size: 30px;
+    }
+    
+    .addborder {
+        margin-left:0;
+    }
+}
