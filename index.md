@@ -1,8 +1,9 @@
 # International Planning Competition 2023 Classical Tracks
 
 This is the website for the classical (sequential, deterministic) track of the
-IPC 2023. This is the 10th IPC containing classical tracks making it the
-oldest part of IPC.
+[IPC 2023](https://ipc2023.github.io).
+This is the 10th IPC containing classical tracks making it the oldest part of
+IPC.
 
 Organizers:
  - [Daniel Fišer](https://danfis.cz) (Saarland University)
