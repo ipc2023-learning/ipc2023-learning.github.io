@@ -13,6 +13,7 @@ Organizers:
 Comming soon
 
 ## Preliminary Schedule
+
 | Event                                         | Date             |
 |:----------------------------------------------|:-----------------|
 | Call for domains / expression of interest     | July, 2022       |
