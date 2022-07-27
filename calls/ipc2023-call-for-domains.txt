@@ -1,0 +1,56 @@
+==============================================================================
+                   2023 International Planning Competition
+                        Classical and Learning Tracks
+
+                              Call for Domains
+
+                         https://ipc2023.github.io
+                         ipc2023@googlegroups.com
+==============================================================================
+
+We are delighted to announce the International Conference on Planning and
+Scheduling (ICAPS) 2023 in Prague will host a next iteration of the
+International Planning Competition (IPC). It empirically evaluates
+state-of-the-art planning systems on a number of benchmark problems. The goals
+of the IPC are to promote planning research, highlight challenges in the
+planning community, and provide new and interesting problems as benchmarks for
+future research.
+
+If you would like to design a domain for the competition please contact us as
+soon as possible (ipc2023@googlegroups.com). We will collaborate in adapting
+the domains to suit the IPC, but we ask you to think about the ability to
+easily scale problem difficulty. If you don't have a domain yourself, but you
+can think of someone who might have an interesting planning problem, please
+share this call with them.
+
+While not necessary, it is desirable for the domains to be related to real
+applications. Moreover, if a domain-dependent planner for the submitted domain
+is available, please include it in the submission.
+
+We will consider all submissions and select the highest quality subset to be
+included. We are aware that participants that submit a domain that is used
+have some advantage with respect to performance on that domain. We view this
+as a good incentive for teams to submit high quality proposals.
+
+Following in the steps of the last IPC, we will select one domain for the
+Outstanding Domain Submission Award. The evaluation of the submitted domains
+will be based mainly on the following criteria:
+ - does the domain model a real world application,
+ - does it come with a generator with controllable difficulty,
+ - does it have an interesting intrinsic difficulty (i.e., it is not a simple
+   problem scaled up),
+ - does it come with a way to find optimal solutions (e.g., a domain-specific
+   solver, or a generator that can create the optimal solutions as well).
+
+As one of the goals of the IPC is to provide a new (publicly available)
+set of benchmarks for future research, we plan to publish all domains
+selected for IPC 2023 in a public repository. By submitting a domain,
+you agree to this and give us the rights to do so. We recommend that you
+also license your domain under a permissive license such as CC-0 so
+that others can use and build on your domain.
+
+If you have a domain in mind but have doubts whether it would be appropriate
+for the IPC, don't hesitate to contact us!
+
+Dan, Florian, and Jendrik
+ipc2023@googlegroups.com
