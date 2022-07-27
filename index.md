@@ -1,12 +1,12 @@
-# International Planning Competition 2023 Learning Tracks
-
 This is the website for the learning tracks of the [IPC
 2023](https://ipc2023.github.io).
 
+**Below is our preliminary plan. Details might change and feedback is welcome!**
+
 ## Setup
 
-The learning tracks will use a similar setup as in 2008, 2011 and 2014. The main
-difference will be that participants don't have access to the selected PDDL
+The learning tracks use a similar setup as in 2008, 2011 and 2014. The main
+difference is that participants don't have access to the selected PDDL
 domains and they don't learn the domain knowledge themselves. Instead, they
 submit a fully automated learning system. Then the organizers learn the domain
 knowledge and evaluate the submitted planners on unseen test instances from the
@@ -18,6 +18,10 @@ Participants will submit two Singularity scripts:
 
 * `./train DOMAIN TASK [TASK]...` (N tasks in ascending "difficulty")
 * `./plan DOMAIN TASK DK PLAN` ("DK" path contains domain knowledge)
+
+We call a domain *polynomial* if all its tasks can be solved suboptimally in
+polynomial time. The competition will include both polynomial and non-polynomial
+domains.
 
 ## Calls
 Comming soon
@@ -39,26 +43,43 @@ Comming soon
 
 ## Tracks
 
-(preliminary plan, details might change)
-
-### Single-core Track
- - single CPU core
+### Single-Core Track
+ - 1 CPU core, no GPU
  - Limits training: 72 hours, 90 GiB
  - Limits evaluation: 30 minutes, 8 GiB
+
+### Multi-Core Track
+ - 1 full CPU (32 cores), 1 GPU
+ - Limits training: 72 hours, 90 GiB
+ - Limits evaluation: 30 minutes, 8 GiB
+
+## Metrics
+
+If an invalid plan is returned (or suboptimal plan for optimal metric), all
+tasks in the domain are counted as unsolved. If that happens in more than one
+domain, the entry is disqualified.
+
+### Optimal
+ - Plans must be optimal.
+ - The score of a planner is the number of solved tasks.
+
+### Satisficing
  - Multiple plans can be returned, the one with the lowest cost is counted.
  - The score of a planner on a solved task is the ratio C\*/C where C is the
    cost of the cheapest discovered plan and C\* is the cost of a reference plan. The score on an unsolved task is 0. The score of a planner is the sum of its scores for all tasks.
- - If an invalid plan is returned, all tasks in the domain are counted as unsolved.
- - If that happens in more than one domain, the entry is disqualified.
 
-**More tracks might be added**
+### Agile
+ - The cost of the discovered plan and the training time are ignored, only the time to find a plan is counted.
+ - The score of a planner on a solved task is 1 if the task was solved within 1 second and 0 if the task was not solved within the resource limits. If the task was solved in T seconds (1 ≤ T ≤ 300) then its score is 1 - log(T)/log(300). The score of a planner is the sum of its scores for all tasks.
 
 
 ## PDDL Fragment
-TBA
+
+Learners and planners must support the following subset of PDDL 3.1: STRIPS, action costs, types, negative
+preconditions.
 
 ## Registration
-Comming soon
+Coming soon
 
 ## Organizers
  - [Jendrik Seipp](https://jendrikseipp.com) (Linköping University)
