@@ -1,11 +1,11 @@
-# International Planning Competition 2023 Learning Track
+# International Planning Competition 2023 Learning Tracks
 
-This is the website for the learning track of the [IPC
+This is the website for the learning tracks of the [IPC
 2023](https://ipc2023.github.io).
 
 ## Setup
 
-The learning track will use a similar setup as in 2008, 2011 and 2014. The main
+The learning tracks will use a similar setup as in 2008, 2011 and 2014. The main
 difference will be that participants don't have access to the selected PDDL
 domains and they don't learn the domain knowledge themselves. Instead, they
 submit a fully automated learning system. Then the organizers learn the domain
@@ -39,7 +39,7 @@ Comming soon
 
 ## Tracks
 
-(preliminary plan)
+(preliminary plan, details might change)
 
 ### Single-core Track
  - single CPU core
