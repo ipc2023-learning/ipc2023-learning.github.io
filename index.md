@@ -23,6 +23,18 @@ We call a domain *polynomial* if all its tasks can be solved suboptimally in
 polynomial time. The competition will include both polynomial and non-polynomial
 domains.
 
+Example domain knowledge includes but is not limited to:
+* a general policy ([example](https://arxiv.org/abs/2101.00692))
+* a C++ program ([example](https://aair-lab.github.io/genplan22/papers/segovia_aguas_GenPlan22.pdf))
+* a domain-general heuristic or partial policy, possibly encoded
+  in a neural network ([example](https://jair.org/index.php/jair/article/view/11633/))
+* a planner configuration or a sequential/parallel portfolio that
+  works well for the given domain ([example](https://rlplab.com/papers/seipp-et-al-aaai2015.pdf))
+* a dynamic algorithm configuration policy ([example](https://prl-theworkshop.github.io/prl2022-icaps/papers/PRL2022_paper_9.pdf))
+* a set of macro actions for the domain ([example](https://www.jair.org/index.php/jair/article/view/10426/))
+
+For example PDDL tasks, see https://github.com/aibasel/downward-benchmarks.
+
 ## Calls
 Comming soon
 
