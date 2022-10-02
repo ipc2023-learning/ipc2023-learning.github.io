@@ -91,10 +91,15 @@ Learners and planners must support the following subset of PDDL 3.1: STRIPS, act
 preconditions.
 
 ## Registration
-Coming soon
+
+Please subscribe to the [Google
+Group](https://groups.google.com/g/ipc2023-learning). We will announce further
+registration steps there in due time.
 
 ## Organizers
  - [Jendrik Seipp](https://jendrikseipp.com) (Linköping University)
  - [Javier Segovia-Aguas](https://jsego.github.io/) (Universitat Pompeu Fabra)
 
-Contact: <mailto:jendrik.seipp@liu.se,javier/dot/segovia/at/upf/dot/edu>
+Public questions: <mailto:ipc2023-learning@googlegroups.com>
+
+Contact organizers: <mailto:jendrik.seipp@liu.se,javier/dot/segovia/at/upf/dot/edu>
