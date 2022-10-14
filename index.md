@@ -35,8 +35,13 @@ Example domain knowledge includes but is not limited to:
 
 For example PDDL tasks, see https://github.com/aibasel/downward-benchmarks.
 
-## Calls
-Comming soon
+## Calls and Registration
+
+Please subscribe to the [Google
+Group](https://groups.google.com/g/ipc2023-learning). We will announce further
+registration steps and all calls there in due time.
+
+To propose a domain for the competition, please contact the organizers (see below).
 
 ## Preliminary Schedule
 
@@ -47,7 +52,7 @@ Comming soon
 | Demo problems provided                        | December, 2022   |
 | Initial planner submission                    | January, 2023    |
 | Feature stop (final planner submission)       | March, 2023      |
-| Planner Abstract submission deadline          | May, 2023        |
+| Planner Abstract submission deadline          | April, 2023      |
 | Contest run                                   | May - June, 2023 |
 | Results announced                             | July, 2023       |
 | Result analysis deadline                      | August, 2023     |
@@ -89,12 +94,6 @@ domain, the entry is disqualified.
 
 Learners and planners must support the following subset of PDDL 3.1: STRIPS, action costs, types, negative
 preconditions.
-
-## Registration
-
-Please subscribe to the [Google
-Group](https://groups.google.com/g/ipc2023-learning). We will announce further
-registration steps there in due time.
 
 ## Organizers
  - [Jendrik Seipp](https://jendrikseipp.com) (Linköping University)
