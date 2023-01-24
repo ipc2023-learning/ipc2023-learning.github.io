@@ -18,7 +18,7 @@ motivation for this setup is to make it easier to run learning systems from
 other authors, which increases reproducibility and helps to turn learning
 algorithms into off-the-shelve tools.
 
-Participants will submit two Singularity scripts:
+Participants will submit separate scripts for each submitted learner and planner:
 
 * `./train DOMAIN TASK_DIR` ("TASK_DIR" contains N tasks from "DOMAIN" in ascending "difficulty")
 * `./plan DOMAIN DK TASK PLAN` ("DK" path contains domain knowledge)
@@ -54,7 +54,7 @@ For example PDDL tasks, see https://github.com/aibasel/downward-benchmarks.
 | Planner abstract submission      | May 24, 2023       |
 | Contest run                      | May - June, 2023   |
 | Results announced                | July 12, 2023      |
-| Result analysis due              | September 20, 2023 |
+| Results analysis due             | September 20, 2023 |
 
 
 ## Environments
