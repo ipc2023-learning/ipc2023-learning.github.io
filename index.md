@@ -92,7 +92,8 @@ domain, the entry is disqualified.
 ## PDDL Fragment
 
 Learners and planners must support the following subset of PDDL 3.1: STRIPS,
-action costs, types, negative preconditions.
+action costs, types, negative preconditions. Some of the training and testing
+tasks may be hard to ground.
 
 
 ## Procedure
