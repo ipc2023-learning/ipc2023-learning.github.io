@@ -20,7 +20,7 @@ algorithms into off-the-shelve tools.
 
 Participants will submit separate scripts for each submitted learner and planner:
 
-* `./train DOMAIN TASK_DIR` ("TASK_DIR" contains N tasks from "DOMAIN" in ascending "difficulty")
+* `./train DOMAIN TASK_DIR` ("TASK_DIR" contains N (probably between 50 and 100) tasks from "DOMAIN" in ascending "difficulty")
 * `./plan DOMAIN DK TASK PLAN` ("DK" path contains domain knowledge)
 
 Details concerning the submissions will be provided via the mailing list below.
@@ -60,14 +60,17 @@ For example PDDL tasks, see https://github.com/aibasel/downward-benchmarks.
 ## Environments
 
 ### Single-Core
- - 1 CPU core, no GPU
+ - 1 CPU core (from an Intel Xeon Gold 6130 CPU), no GPU
  - Limits training: 72 hours, 90 GiB
  - Limits evaluation: 30 minutes, 8 GiB
 
 ### Multi-Core
- - 1 full CPU (32 cores), 1 GPU
+ - 1 full CPU (Intel Xeon Gold 6130 with 32 cores), 1 GPU (NVIDIA® T4, CUDA 11.7, see [GPU instructions](https://www.nsc.liu.se/support/systems/tetralith-GPU-user-guide/))
  - Limits training: 72 hours, 90 GiB
  - Limits evaluation: 30 minutes, 8 GiB
+
+<!-- For training and evaluation we limit disk space to 2 GiB. -->
+
 
 ## Metrics
 
@@ -113,12 +116,12 @@ the source code of submitted planners must be released under a license allowing
 free non-commercial use.
 
 As in the classical tracks of IPC 2018, we will use the container technology
-[Apptainer](http://apptainer.org/) (formerly known as Singularity) to promote
-reproducibility and simplify program compilation. In contrast to IPC 2018, we
-will host repositories of planners ourselves. The repositories will be hosted on
-GitHub under the [ipc2023-learning](https://github.com/ipc2023-learning)
-organization, and they will be kept private until the end of the competition
-when we make them public.
+[Apptainer](http://apptainer.org/) (version 1.1.5, formerly known as
+Singularity) to promote reproducibility and simplify program compilation. In
+contrast to IPC 2018, we will host repositories of planners ourselves. The
+repositories will be hosted on GitHub under the
+[ipc2023-learning](https://github.com/ipc2023-learning) organization, and they
+will be kept private until the end of the competition when we make them public.
 
 When a competition team registers (see below), we create a private repository
 (or multiple repositories if needed) and add competitors as users with write
@@ -162,6 +165,12 @@ Group](https://groups.google.com/g/ipc2023-learning)**. We will announce further
 details on the submission process there in due time.
 
 To propose a domain for the competition, please contact the organizers (see below).
+
+### Large files
+GitHub repos have a file size limit of 100 MB. If you need files larger than
+this, you must upload them to an long-term file preservation site such as
+[Zenodo](https://zenodo.org/) and let your Apptainer script download them. The
+maximum size for Apptainer images is 2 GiB.
 
 
 ## Organizers
