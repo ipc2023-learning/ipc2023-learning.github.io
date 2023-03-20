@@ -20,10 +20,12 @@ algorithms into off-the-shelve tools.
 
 Participants will submit separate scripts for each submitted learner and planner:
 
-* `./train DOMAIN TASK_DIR` ("TASK_DIR" contains N (probably between 50 and 100) tasks from "DOMAIN" in ascending "difficulty")
-* `./plan DOMAIN DK TASK PLAN` ("DK" path contains domain knowledge)
+* `./learn DK DOMAIN TASK1 TASK2 ...`
+* `./plan DK DOMAIN TASK PLAN`
 
-Details concerning the submissions will be provided via the mailing list below.
+We plan to pass between 50 and 100 tasks from "DOMAIN" in ascending
+"difficulty". The learner will write its learned domain knowledge into the "DK" file.
+For details concerning the submission, [see below](#submission).
 
 We call a domain *polynomial* if all its tasks can be solved suboptimally in
 polynomial time. The competition will include both polynomial and non-polynomial
@@ -49,7 +51,7 @@ For example PDDL tasks, see https://github.com/aibasel/downward-benchmarks.
 | Call for domains                 | July, 2022         |
 | Domain submission deadline       | December 9, 2022   |
 | Demo problems provided           | February, 2023     |
-| Team registration                | February 22, 2023  |
+| Team registration                | <strike>February 22, 2023</strike> April 19, 2023 |
 | Feature stop (final submission)  | April 19, 2023     |
 | Planner abstract submission      | May 24, 2023       |
 | Contest run                      | May - June, 2023   |
@@ -87,7 +89,7 @@ domain, the entry is disqualified.
  - The cost of the discovered plan and the training time are ignored, only the time to find a plan is counted.
  - The score of a planner on a solved task is 1 if the task was solved within 1 second and 0 if the task was not solved within the resource limits. If the task was solved in T seconds (1 ≤ T ≤ 300) then its score is 1 - log(T)/log(300). The score of a planner is the sum of its scores for all tasks.
 
-### Optimal
+### Optimal (cancelled)
  - Plans must be optimal.
  - The score of a planner is the number of solved tasks.
 
@@ -97,44 +99,6 @@ domain, the entry is disqualified.
 Learners and planners must support the following subset of PDDL 3.1: STRIPS,
 action costs, types, negative preconditions. Some of the training and testing
 tasks may be hard to ground.
-
-
-## Procedure
-
-The competitors must submit the source code of their learner and planners, which
-will be run by the organizers on the competition domains/problems, unknown to
-the competitors until this time. This way no fine-tuning of the learners or
-planners will be possible.
-
-All competitors must submit an up to 8-page paper describing their learner and
-planners (see [schedule](#schedule)). After the competition we ask the
-participants to analyze the results of their learners and planners and submit an
-extended version of their paper. An important requirement for IPC 2023
-competitors is to give the organizers the right to post their paper and the
-source code of their learners/planners on the official IPC 2023 web site, and
-the source code of submitted planners must be released under a license allowing
-free non-commercial use.
-
-As in the classical tracks of IPC 2018, we will use the container technology
-[Apptainer](http://apptainer.org/) (version 1.1.5, formerly known as
-Singularity) to promote reproducibility and simplify program compilation. In
-contrast to IPC 2018, we will host repositories of planners ourselves. The
-repositories will be hosted on GitHub under the
-[ipc2023-learning](https://github.com/ipc2023-learning) organization, and they
-will be kept private until the end of the competition when we make them public.
-
-When a competition team registers (see below), we create a private repository
-(or multiple repositories if needed) and add competitors as users with write
-access.
-After the "feature stop" deadline (see [schedule](#schedule)), we allow competitors to
-send only pull requests with bug fixes.
-We will review every pull request with its accompanying description of the bug
-fix to make sure that no big changes or parameter tuning are possible.
-To help us with the debugging process, in contrast to previous years, planner
-authors will be responsible for detecting if the run of their planner and our
-analysis of the results was successful. We will provide more details on this
-later.
-
 
 ## Registration
 
@@ -158,13 +122,121 @@ The email must contain:
 Based on that, we will create private repositories under the
 [ipc2023-learning](https://github.com/ipc2023-learning) organization and add
 all participants as users with with write access and participants can commit
-to the repository as they wish until the "feature stop" deadline.
+to the repository as they wish until the "feature stop" deadline (see [schedule](#schedule)).
 
-All participants must subscribe to the **[Google
-Group](https://groups.google.com/g/ipc2023-learning)**. We will announce further
-details on the submission process there in due time.
+After the feature stop deadline, we allow competitors to send only pull requests
+with bug fixes. We will review every pull request with its accompanying
+description of the bug fix to make sure that no big changes or parameter tuning
+are possible.
+
+All participants **must** subscribe to the **[Google
+Group](https://groups.google.com/g/ipc2023-learning)**.
 
 To propose a domain for the competition, please contact the organizers (see below).
+
+## Submission
+
+The competitors must submit the source code of their learner and planners, which
+will be run by the organizers on the competition domains/problems, unknown to
+the competitors until this time. This way no fine-tuning of the learners or
+planners will be possible.
+
+An important requirement for IPC 2023 competitors is to give the organizers the
+right to post their paper and the source code of their learners/planners on the
+official IPC 2023 web site, and the source code of all submissions must be
+released under a license allowing free non-commercial use.
+
+As in the classical tracks of IPC 2018, we will use the container technology
+[Apptainer](http://apptainer.org/) (version 1.1.5, formerly known as
+Singularity) to promote reproducibility and simplify program compilation. In
+contrast to IPC 2018, we will host repositories of planners ourselves. The
+repositories will be hosted on GitHub under the
+[ipc2023-learning](https://github.com/ipc2023-learning) organization, and they
+will be kept private until the end of the competition when we make them public.
+
+We allow to submit multiple learners/planners to multiple tracks from a single
+repository. In each repository, we only consider the branch `ipc2023-learning`.
+Feel free to use other branches for development as you wish, but we will ignore
+them. Any pair of files called `Apptainer.<shortname>.{learn|plan}` in the root
+directory of this branch defines one entry. For the `<shortname>`, please use
+the name and variant of your planner as a short identifier (a single word, up to
+16 characters long, starting with a letter, using only letters, digits, and
+underscores). If you build different versions of your planner from the same
+repository, use a different `<shortname>` per version. A single entry can
+participate in multiple tracks, see "Apptainer Images" for details.
+
+### Apptainer images
+
+We prepared a [demo submission](https://github.com/ipc2023-learning/baseline01)
+that showcases how to set up the repository and Apptainer scripts.
+
+Your Apptainer recipe files have to specify the following labels:
+
+* `Name`: name of the submission
+* `Description`: a short description of your submission
+* `Authors`: a list of authors, including contact email addresses (`Firstname Lastname <firstname.lastname@email.example>`)
+* `License`: the license under which you publish this code. It has to be permissive enough to allow us to publish the code after the competition.
+* `Environments`: a comma-separated list of environments this submission should participate in. Use only the following terms: `single-core`, `multi-core`.
+* You don't need to specify evaluation metrics: all submissions will be evaluated under both the [agile](#agile) and [satisficing](#satisficing) metric.
+* Your Apptainer recipe must contain all of the following labels describing
+supported PDDL features. Each label must be set to either `yes` or `no`, or if
+the feature is supported only partially, then set it to `partially, ` followed
+by the description of what is and isn't supported:
+
+  * `SupportsDerivedPredicates`: specify whether your submission supports the `(:derived ...)` construct
+  * `SupportsUniversallyQuantifiedPreconditions`: `(forall ...)` in actions' preconditions
+  * `SupportsExistentiallyQuantifiedPreconditions`: `(exists ...)` in actions' preconditions
+  * `SupportsUniversallyQuantifiedEffects`: `(forall ...)` in actions' effects
+  * `SupportsNegativePreconditions`: `(not (...))` in actions' preconditions
+  * `SupportsEqualityPreconditions`: `(= ?x obj1)`, for action parameter `?x` and constant `obj1`, in actions' preconditions
+  * `SupportsInequalityPreconditions`: `(not (= ?x ?y))` or `(not (= ?x obj1))`, for action parameters `?x` and `?y`, and constant `obj1`, in actions' preconditions
+  * `SupportsConditionalEffects`: `(when ...)` in actions' effects
+  * `SupportsImplyPreconditions`: `(imply ...)` in actions' preconditions
+
+Even though the labels will be the same in most cases for both
+`Apptainer.<shortname>.{learn|plan}` files, we ask you to add this information
+to both recipes.
+
+To improve reproducibility, we require Apptainer images to be self-contained and
+licensed appropriately.
+
+* The recipe should copy the content of the repository into the container at the
+start of the build. In particular, do not clone repositories in the recipe.
+
+* If you use third-party libraries, either install them through standard package
+managers (apt, yum, pip), or copy them into the repository. Please do not use
+git submodules to include dependencies.
+
+* If possible, use explicit versions. For example, do not use `ubuntu:latest` as
+your base image but pick a specific version. If you install packages through pip,
+pick specific versions of those packages.
+
+* If your build depends on closed-source libraries that require a license,
+please contact us.
+
+* If you use a portfolio of existing learners/planners, it is up to you to get permission
+from the authors of the portfolio components and give appropriate credit and
+licensing. We recommend contacting the original authors.
+
+In addition to reproducibility and licensing issues, we ask that you make your image as small as possible using the following tricks:
+
+* Use a [multi-stage build](https://apptainer.org/docs/user/latest/definition_files.html#multi-stage-builds)
+where one stage is used for compiling the planner and one for running the
+planner. Copy the compiled planner from the first stage to the second, and only
+copy/install the files that are required at runtime. The size of the compilation
+stage then does not matter and the second stage can be limited to contain only
+essential files.
+
+* [Strip binaries](https://www.man7.org/linux/man-pages/man1/strip.1.html) after compilation
+
+* Use small packages. For example, use python-minimal instead of python if possible.
+
+### Extended abstracts
+
+All competitors must submit an up to 8-page paper describing their learner and
+planners (see [schedule](#schedule)). After the competition we ask the
+participants to analyze the results of their learners and planners and submit an
+extended version of their paper.
 
 ### Large files
 GitHub repos have a file size limit of 100 MB. If you need files larger than
@@ -172,6 +244,19 @@ this, you must upload them to an long-term file preservation site such as
 [Zenodo](https://zenodo.org/) and let your Apptainer script download them. The
 maximum size for Apptainer images is 2 GiB.
 
+## Bug-fixing Policy
+
+To help us with the debugging process, planner authors will be responsible for
+detecting if the run of their planner and our analysis of the results was
+successful. After the feature stop deadline, we will run all planners on all
+tasks and give the participants access to the results of their planners. For
+each run, the data will contain the log files of the planner, measured time and
+memory consumption, exit code, and our conclusion about what this means in terms
+of solving the instance. We ask participants to check their results for any
+errors. If an error was caused by a bug in the planner, please send a pull
+request on GitHub with a detailed description of the bug and the fix. If the
+error was on our side (e.g., malformed PDDL) let us know as soon as possible. We
+will do at least two rounds of this starting after the "feature stop" deadline.
 
 ## Organizers
  - [Jendrik Seipp](https://jendrikseipp.com) (Linköping University)
