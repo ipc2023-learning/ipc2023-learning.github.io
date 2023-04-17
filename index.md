@@ -52,7 +52,7 @@ For example PDDL tasks, see https://github.com/aibasel/downward-benchmarks.
 | Domain submission deadline       | December 9, 2022   |
 | Demo problems provided           | February, 2023     |
 | Team registration                | <strike>February 22, 2023</strike> April 19, 2023 |
-| Feature stop (final submission)  | April 19, 2023     |
+| Feature stop (final submission)  | April <strike>19</strike> 27, 2023     |
 | Planner abstract submission      | May 24, 2023       |
 | Contest run                      | May - June, 2023   |
 | Results announced                | July 12, 2023      |
