@@ -63,15 +63,17 @@ For example PDDL tasks, see https://github.com/aibasel/downward-benchmarks.
 
 ### Single-Core
  - 1 CPU core (from an Intel Xeon Gold 6130 CPU), no GPU
- - Limits training: 72 hours, 90 GiB
- - Limits evaluation: 30 minutes, 8 GiB
+ - Limits training per domain: 72 hours, 90 GiB
+ - Limits evaluation per task: 30 minutes, 8 GiB
 
 ### Multi-Core
  - 1 full CPU (Intel Xeon Gold 6130 with 32 cores), 1 GPU (NVIDIA® T4, CUDA 11.7, see [GPU instructions](https://www.nsc.liu.se/support/systems/tetralith-GPU-user-guide/))
- - Limits training: 72 hours, 90 GiB
- - Limits evaluation: 30 minutes, 8 GiB
+ - Limits training per domain: 72 hours, 90 GiB
+ - Limits evaluation per task: 30 minutes, 8 GiB
 
 <!-- For training and evaluation we limit disk space to 2 GiB. -->
+
+When the learner/planner exceeds the time limit, we send them the SIGTERM signal, which can be caught to write the domain knowledge file or the final plan file, and then gracefully exit. After an additional 10 seconds, we send SIGKILL.
 
 
 ## Metrics
