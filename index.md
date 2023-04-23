@@ -167,6 +167,25 @@ underscores). If you build different versions of your planner from the same
 repository, use a different `<shortname>` per version. A single entry can
 participate in multiple tracks, see "Apptainer Images" for details.
 
+### Details for learners
+
+* Given the domain knowledge (DK) prefix "dk", your learner must write domain knowledge files "dk.1", "dk.2", etc., whenever "better" knowledge is found. We will use the last dk.x file for deciding the IPC ranking, but reserve the possibility to also analyze the quality of the domain knowledge over time in later analyses.
+* To avoid having corrupted DK files due to your learner being terminated, you should write the new DK to a temporary file and rename the file to dk.x once it's written.
+* Since you can write better DK files over time, there should be no need to be notified when the learning time budget is about to be exhausted. Still, after 72 hours, we will send the SIGTERM signal, which can be caught by the learner to gracefully exit. After an additional 60 seconds, we send SIGKILL.
+* If your DK files are large, please compress them. We recommend xz for this purpose.
+* Our cluster has strict storage limits, which is why we need to limit
+  * the total disk usage to 10 GiB per team and domain, and
+  * the number of files to 1000 per team and domain.
+  * If you really need to use more disk space or generate more files temporarily, you must delete them afterwards, or compress them in a single (tar.xz or similar) file. Compressing them is preferable for debugging purposes.
+* You may print a warning to stderr if your learner deems the training set to be inadequate (e.g., too few easy instances). If so, please also print how the training set would need to be changed (e.g., "We require at least 3 instances with state spaces that can be exhaustively explored.")
+
+### Details for planners:
+
+* A plan is valid if it is accepted by the plan validator [VAL](https://github.com/KCL-Planning/VAL).
+* Given the plan prefix "plan", your planner must write plan files "plan.1", "plan.2", etc. Even if your planner is not an anytime planner and only finds a single plan, please still name that plan "plan.1".
+* For the agile metric, we will only take the time to find "plan.1" into account.
+* For the satisficing metric, we will only take the cheapest found plan into account.
+
 ### Apptainer images
 
 We prepared a [demo submission](https://github.com/ipc2023-learning/baseline01)
