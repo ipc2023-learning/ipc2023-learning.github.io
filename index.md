@@ -73,7 +73,7 @@ For example PDDL tasks, see https://github.com/aibasel/downward-benchmarks.
 
 <!-- For training and evaluation we limit disk space to 2 GiB. -->
 
-When the learner/planner exceeds the time limit, we send them the SIGTERM signal, which can be caught to write the domain knowledge file or the final plan file, and then gracefully exit. After an additional 10 seconds, we send SIGKILL.
+When the learner exceeds the time limit, we send them the SIGTERM signal, which can be caught to write the domain knowledge file and then gracefully exit. After an additional 60 seconds, we send SIGKILL.
 
 
 ## Metrics
