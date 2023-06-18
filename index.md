@@ -63,12 +63,12 @@ For example PDDL tasks, see https://github.com/aibasel/downward-benchmarks.
 
 ### Single-Core
  - 1 CPU core (from an Intel Xeon Gold 6130 CPU), no GPU
- - Limits training per domain: 72 hours, 90 GiB
+ - Limits training per domain: 24 hours, 32 GiB
  - Limits evaluation per task: 30 minutes, 8 GiB
 
 ### Multi-Core
  - 1 full CPU (Intel Xeon Gold 6130 with 32 cores), 1 GPU (NVIDIA® T4, CUDA 11.7, see [GPU instructions](https://www.nsc.liu.se/support/systems/tetralith-GPU-user-guide/))
- - Limits training per domain: 72 hours, 90 GiB
+ - Limits training per domain: 24 hours, 90 GiB
  - Limits evaluation per task: 30 minutes, 8 GiB
 
 <!-- For training and evaluation we limit disk space to 2 GiB. -->
@@ -262,8 +262,7 @@ extended version of their paper.
 ### Large files
 GitHub repos have a file size limit of 100 MB. If you need files larger than
 this, you must upload them to an long-term file preservation site such as
-[Zenodo](https://zenodo.org/) and let your Apptainer script download them. The
-maximum size for Apptainer images is 2 GiB.
+[Zenodo](https://zenodo.org/) and let your Apptainer script download them.
 
 ## Bug-fixing Policy
 
