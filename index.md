@@ -288,10 +288,6 @@ will do at least two rounds of this starting after the "feature stop" deadline.
   *Alvaro Torralba, Daniel Gnad*<br>
   Good Old-Fashioned AI that learns how to partially ground tasks from a given domain.
 
-* **Hierarchical Policy Learner** [(planner abstract)](abstracts/h_policy.pdf)<br>
-  *Dominik Drexler*<br>
-  Learn hierarchical policies for polynomial domains.
-
 * **HUZAR** [(planner abstract)](abstracts/huzar.pdf)<br>
   *Piotr Rafal Gzubicki, Bartosz Piotr Lachowicz, Alvaro Torralba*<br>
   Learn to distinguish between good and bad transitions by feeding problem description graphs into a GNN.
@@ -304,6 +300,10 @@ will do at least two rounds of this starting after the "feature stop" deadline.
   *Chao Lei, Nir Lipovetzky, Krista A. Ehinger*<br>
   Novelty-based generalized planner that prunes a newly generated planning
   program if its most frequent action repetition is greater than a given bound.
+
+* **Vanir** [(planner abstract)](abstracts/vanir.pdf)<br>
+  *Dominik Drexler*<br>
+  Learn width-based hierarchical policies for polynomial domains.
 
 ### Baselines
 
