@@ -51,8 +51,8 @@ For example PDDL tasks, see https://github.com/aibasel/downward-benchmarks.
 | Call for domains                 | July, 2022         |
 | Domain submission deadline       | December 9, 2022   |
 | Demo problems provided           | February, 2023     |
-| Team registration                | <strike>February 22, 2023</strike> April 19, 2023 |
-| Feature stop (final submission)  | April <strike>19</strike> 27, 2023     |
+| Team registration                | April 19, 2023     |
+| Feature stop (final submission)  | April 27, 2023     |
 | Planner abstract submission      | May 24, 2023       |
 | Contest run                      | May - June, 2023   |
 | Results announced                | July 12, 2023      |
@@ -66,7 +66,7 @@ For example PDDL tasks, see https://github.com/aibasel/downward-benchmarks.
  - Limits training per domain: 24 hours, 32 GiB
  - Limits evaluation per task: 30 minutes, 8 GiB
 
-### Multi-Core
+### Multi-Core (canceled)
  - 1 full CPU (Intel Xeon Gold 6130 with 32 cores), 1 GPU (NVIDIA® T4, CUDA 11.7, see [GPU instructions](https://www.nsc.liu.se/support/systems/tetralith-GPU-user-guide/))
  - Limits training per domain: 24 hours, 90 GiB
  - Limits evaluation per task: 30 minutes, 8 GiB
@@ -277,6 +277,44 @@ errors. If an error was caused by a bug in the planner, please send a pull
 request on GitHub with a detailed description of the bug and the fix. If the
 error was on our side (e.g., malformed PDDL) let us know as soon as possible. We
 will do at least two rounds of this starting after the "feature stop" deadline.
+
+## Participants
+
+* **ASNets 2023** [(planner abstract)](abstracts/asnets.pdf)<br>
+  *Mingyu Hao, Ryan Wang, Sam Toyer, Felipe Trevizan, Sylvie Thiébaux, Lexing Xie*<br>
+  Action Schema Networks implemented in Tensorflow 2.
+
+* **GOFAI** [(planner abstract)](abstracts/gofai.pdf)<br>
+  *Alvaro Torralba, Daniel Gnad*<br>
+  Good Old-Fashioned AI that learns how to partially ground tasks from a given domain.
+
+* **Hierarchical Policy Learner** [(planner abstract)](abstracts/h_policy.pdf)<br>
+  *Dominik Drexler*<br>
+  Learn hierarchical policies for polynomial domains.
+
+* **HUZAR** [(planner abstract)](abstracts/huzar.pdf)<br>
+  *Piotr Rafal Gzubicki, Bartosz Piotr Lachowicz, Alvaro Torralba*<br>
+  Learn to distinguish between good and bad transitions by feeding problem description graphs into a GNN.
+
+* **Muninn** [(planner abstract)](abstracts/muninn.pdf)<br>
+  *Simon Ståhlberg, Blai Bonet, Hector Geffner*<br>
+  Learn Relational MPNNs for STRIPS.
+
+* **Novelty-based Progressive Generalized Planner** [(planner abstract)](abstracts/npgp.pdf)<br>
+  *Chao Lei, Nir Lipovetzky, Krista A. Ehinger*<br>
+  Novelty-based generalized planner that prunes a newly generated planning
+  program if its most frequent action repetition is greater than a given bound.
+
+### Baselines
+
+* **Fast Downward SMAC 2014** [(planner abstract)](abstracts/downward_smac.pdf)<br>
+  *Jendrik Seipp, Silvan Sievers, Frank Hutter*<br>
+  Single Fast Downward configuration, optimized with SMAC for the given training tasks.
+
+* **Progressive Generalized Planner** [(planner abstract)](abstracts/pgp.pdf)<br>
+  *Javier Segovia-Aguas, Sergio Jiménez, Laura Sebastiá, Anders Jonsson*<br>
+  Fixed configuration of PGP for the given training tasks.
+
 
 ## Organizers
  - [Jendrik Seipp](https://jendrikseipp.com) (Linköping University)
