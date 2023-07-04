@@ -4,6 +4,10 @@ where algorithms learn domain-specific knowledge in an offline pre-processing
 phase and then feed that knowledge to a planner to solve new tasks from the same
 domain.
 
+## Quicklinks
+
+* [Participants](#participants)
+
 ## Overview
 
 The learning tracks use a similar setup as in
