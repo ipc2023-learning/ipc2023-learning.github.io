@@ -7,6 +7,7 @@ domain.
 ## Quicklinks
 
 * [Participants](#participants)
+* [Results](#results)
 
 ## Overview
 
@@ -93,7 +94,7 @@ domain, the entry is disqualified.
 
 ### Agile
  - The cost of the discovered plan and the training time are ignored, only the time to find a plan is counted.
- - The score of a planner on a solved task is 1 if the task was solved within 1 second and 0 if the task was not solved within the resource limits. If the task was solved in T seconds (1 ≤ T ≤ 300) then its score is 1 - log(T)/log(300). The score of a planner is the sum of its scores for all tasks.
+ - The score of a planner on a solved task is 1 if the task was solved within 1 second and 0 if the task was not solved within the resource limits. If the task was solved in T seconds (1 ≤ T ≤ 1800) then its score is 1 - log(T)/log(1800). The score of a planner is the sum of its scores for all tasks.
 
 ### Optimal (cancelled)
  - Plans must be optimal.
@@ -318,6 +319,14 @@ will do at least two rounds of this starting after the "feature stop" deadline.
 * **Progressive Generalized Planner** [(planner abstract)](abstracts/pgp.pdf)<br>
   *Javier Segovia-Aguas, Sergio Jiménez, Laura Sebastiá, Anders Jonsson*<br>
   Fixed configuration of PGP for the given training tasks.
+
+
+## Results
+
+* Winner: **[GOFAI](abstracts/gofai.pdf)** by
+  *Alvaro Torralba* and *Daniel Gnad*
+* Runner-Up: **[HUZAR](abstracts/huzar.pdf)** by
+  *Piotr Rafal Gzubicki*, *Bartosz Piotr Lachowicz* and *Alvaro Torralba*
 
 
 ## Organizers
