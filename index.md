@@ -328,6 +328,9 @@ will do at least two rounds of this starting after the "feature stop" deadline.
 * Runner-Up: **[HUZAR](abstracts/huzar.pdf)** by
   *Piotr Rafal Gzubicki*, *Bartosz Piotr Lachowicz* and *Alvaro Torralba*
 
+* [Awards talk](talk.pdf) presented at ICAPS 2023 in Prague.
+* [HTML report](results.html) of the results (only includes systems that learned domain knowledge in at least one domain).
+
 
 ## Organizers
  - [Jendrik Seipp](https://jendrikseipp.com) (Linköping University)
