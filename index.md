@@ -4,10 +4,21 @@ where algorithms learn domain-specific knowledge in an offline pre-processing
 phase and then feed that knowledge to a planner to solve new tasks from the same
 domain.
 
-## Quicklinks
 
-* [Participants](#participants)
-* [Results](#results)
+## Results
+
+* Winner: **[GOFAI](abstracts/gofai.pdf)** by
+  *Alvaro Torralba* and *Daniel Gnad*
+* Runner-Up: **[HUZAR](abstracts/huzar.pdf)** by
+  *Piotr Rafal Gzubicki*, *Bartosz Piotr Lachowicz* and *Alvaro Torralba*
+
+* [Awards talk](talk.pdf) presented at ICAPS 2023 in Prague.
+* [HTML report](results.html) of the results (only includes systems that learned domain knowledge in at least one domain).
+* [Repos](https://github.com/ipc2023-learning/):
+  * see [links below](#participants) for submissions
+  * [benchmarks](https://github.com/ipc2023-learning/benchmarks) (including [domain-specific solvers](https://github.com/ipc2023-learning/benchmarks/tree/main/solutions))
+  * [scripts](https://github.com/ipc2023-learning/scripts)
+  * [logs](https://github.com/ipc2023-learning/logs)
 
 ## Overview
 
@@ -285,51 +296,40 @@ will do at least two rounds of this starting after the "feature stop" deadline.
 
 ## Participants
 
-* **ASNets 2023** [(planner abstract)](abstracts/asnets.pdf)<br>
+* **ASNets 2023** ([code](https://github.com/ipc2023-learning/repo05), [planner abstract](abstracts/asnets.pdf))<br>
   *Mingyu Hao, Ryan Wang, Sam Toyer, Felipe Trevizan, Sylvie Thiébaux, Lexing Xie*<br>
   Action Schema Networks implemented in Tensorflow 2.
 
-* **GOFAI** [(planner abstract)](abstracts/gofai.pdf)<br>
+* **GOFAI** ([code](https://github.com/ipc2023-learning/repo03), [planner abstract](abstracts/gofai.pdf))<br>
   *Alvaro Torralba, Daniel Gnad*<br>
   Good Old-Fashioned AI that learns how to partially ground tasks from a given domain.
 
-* **HUZAR** [(planner abstract)](abstracts/huzar.pdf)<br>
+* **HUZAR** ([code](https://github.com/ipc2023-learning/repo01), [planner abstract](abstracts/huzar.pdf))<br>
   *Piotr Rafal Gzubicki, Bartosz Piotr Lachowicz, Alvaro Torralba*<br>
   Learn to distinguish between good and bad transitions by feeding problem description graphs into a GNN.
 
-* **Muninn** [(planner abstract)](abstracts/muninn.pdf)<br>
+* **Muninn** ([code](https://github.com/ipc2023-learning/repo09), [planner abstract](abstracts/muninn.pdf))<br>
   *Simon Ståhlberg, Blai Bonet, Hector Geffner*<br>
   Learn Relational MPNNs for STRIPS.
 
-* **Novelty-based Progressive Generalized Planner** [(planner abstract)](abstracts/npgp.pdf)<br>
+* **Novelty-based Progressive Generalized Planner** ([code](https://github.com/ipc2023-learning/repo02), [planner abstract](abstracts/npgp.pdf))<br>
   *Chao Lei, Nir Lipovetzky, Krista A. Ehinger*<br>
   Novelty-based generalized planner that prunes a newly generated planning
   program if its most frequent action repetition is greater than a given bound.
 
-* **Vanir** [(planner abstract)](abstracts/vanir.pdf)<br>
+* **Vanir** ([code](https://github.com/ipc2023-learning/repo08), [planner abstract](abstracts/vanir.pdf))<br>
   *Dominik Drexler*<br>
   Learn width-based hierarchical policies for polynomial domains.
 
 ### Baselines
 
-* **Fast Downward SMAC 2014** [(planner abstract)](abstracts/downward_smac.pdf)<br>
+* **Fast Downward SMAC 2014** ([code](https://github.com/ipc2023-learning/baseline01), [planner abstract](abstracts/downward_smac.pdf))<br>
   *Jendrik Seipp, Silvan Sievers, Frank Hutter*<br>
   Single Fast Downward configuration, optimized with SMAC for the given training tasks.
 
-* **Progressive Generalized Planner** [(planner abstract)](abstracts/pgp.pdf)<br>
+* **Progressive Generalized Planner** ([code](https://github.com/ipc2023-learning/baseline02), [planner abstract](abstracts/pgp.pdf))<br>
   *Javier Segovia-Aguas, Sergio Jiménez, Laura Sebastiá, Anders Jonsson*<br>
   Fixed configuration of PGP for the given training tasks.
-
-
-## Results
-
-* Winner: **[GOFAI](abstracts/gofai.pdf)** by
-  *Alvaro Torralba* and *Daniel Gnad*
-* Runner-Up: **[HUZAR](abstracts/huzar.pdf)** by
-  *Piotr Rafal Gzubicki*, *Bartosz Piotr Lachowicz* and *Alvaro Torralba*
-
-* [Awards talk](talk.pdf) presented at ICAPS 2023 in Prague.
-* [HTML report](results.html) of the results (only includes systems that learned domain knowledge in at least one domain).
 
 
 ## Organizers
