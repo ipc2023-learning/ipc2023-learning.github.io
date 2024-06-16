@@ -13,6 +13,7 @@ domain.
   *Piotr Rafal Gzubicki*, *Bartosz Piotr Lachowicz* and *Alvaro Torralba*
 
 * [Awards talk](talk.pdf) presented at ICAPS 2023 in Prague.
+* [AI Magazine Article](https://doi.org/10.1002/aaai.12169) summarizing the results of all IPC 2023 tracks.
 * [HTML report](results.html) of the results (only includes systems that learned domain knowledge in at least one domain).
 * [Repos](https://github.com/ipc2023-learning/):
   * see [links below](#participants) for submissions
