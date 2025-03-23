@@ -14,7 +14,7 @@ domain.
 
 * [Awards talk](talk.pdf) presented at ICAPS 2023 in Prague.
 * [AI Magazine Article](https://doi.org/10.1002/aaai.12169) summarizing the results of all IPC 2023 tracks.
-* [HTML report](results.html) of the results (only includes systems that learned domain knowledge in at least one domain).
+* [HTML report](results.html) and [properties file](properties) of the results on the test set (only includes systems that learned domain knowledge in at least one domain).
 * [Repos](https://github.com/ipc2023-learning/):
   * see [links below](#participants) for submissions
   * [benchmarks](https://github.com/ipc2023-learning/benchmarks) (including [domain-specific solvers](https://github.com/ipc2023-learning/benchmarks/tree/main/solutions))
