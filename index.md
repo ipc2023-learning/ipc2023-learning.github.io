@@ -21,6 +21,24 @@ domain.
   * [scripts](https://github.com/ipc2023-learning/scripts)
   * [logs](https://github.com/ipc2023-learning/logs)
 
+
+## Citation
+
+```
+@article{taitler-et-al-aimag2024,
+  author       = {Ayal Taitler and Ron Alford and Joan Espasa and Gregor Behnke and Daniel
+    Fi{\v{s}}er and Michael Gimelfarb and Florian Pommerening and Scott Sanner and Enrico
+    Scala and Dominik Schreiber and Javier Segovia-Aguas and Jendrik Seipp},
+  title        = {The 2023 {International Planning Competition}},
+  journal      = {AI Magazine},
+  year         = 2024,
+  pages        = {280--296},
+  volume       = 45,
+  number       = 2,
+  doi          = {10.1002/aaai.12169},
+}
+```
+
 ## Overview
 
 The learning tracks use a similar setup as in
